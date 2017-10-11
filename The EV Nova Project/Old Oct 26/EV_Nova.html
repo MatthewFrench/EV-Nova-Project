@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>EV Nova - HTML5 Remake</title>
+    <script type="text/javascript" src="EV_Nova.js"></script>
+	<style type="text/css">
+	<!--
+	html,body {
+	overflow:hidden;
+	}
+	-->
+</style>
+  </head>
+  <body onkeydown = "handleKeydown (event)" onkeyup = "handleKeyup (event)" style = "background-color:rgb(0,0,0);" onload = "moveTo(0,0);resizeTo(1155,767);initialize();resizeTo(1155,767);" scroll="no">
+    <div id="gameDiv">
+	<canvas id="mainCanvas" width="961px" height="767px" 
+			style="position: absolute; left: 0px; top: 0px; z-index: 0;">
+			Get a newer browser.
+	</canvas>
+	<canvas id="hudCanvas" width="194px" height="767px" 
+			style="position: absolute; left: 961px; top: 0px; z-index: 0;">
+			Get a newer browser.
+	</canvas>
+	</div>
+  </body>
+</html>

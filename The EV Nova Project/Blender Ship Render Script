@@ -1,0 +1,41 @@
+import bpy
+import math
+
+for i in range(0, 72):
+    #Rotate the object
+    ship = bpy.data.objects['Ship Controller']
+    ship.rotation_euler = [0,0,-(i*5)/180*math.pi]
+
+    #Name the Filename 
+    num = str(i)
+    print(num)
+    bpy.data.scenes[0].render.filepath = '//HTML5 EV Nova/Ship Gfx/Dark Flier/Straight/' + 'Rotation_' + num + '_'
+
+    #Render 
+    bpy.ops.render.render(animation=True)
+
+for i in range(0, 72):
+    #Rotate the object
+    ship = bpy.data.objects['Ship Controller']
+    ship.rotation_euler = [0,10/180*math.pi,-(i*5)/180*math.pi]
+
+    #Name the Filename 
+    num = str(i)
+    print(num)
+    bpy.data.scenes[0].render.filepath = '//HTML5 EV Nova/Ship Gfx/Dark Flier/Left/' + 'Rotation_' + num + '_'
+
+    #Render 
+    bpy.ops.render.render(animation=True)
+
+for i in range(0, 72):
+    #Rotate the object
+    ship = bpy.data.objects['Ship Controller']
+    ship.rotation_euler = [0,-10/180*math.pi,-(i*5)/180*math.pi]
+
+    #Name the Filename 
+    num = str(i)
+    print(num)
+    bpy.data.scenes[0].render.filepath = '//HTML5 EV Nova/Ship Gfx/Dark Flier/Right/' + 'Rotation_' + num + '_'
+
+    #Render 
+    bpy.ops.render.render(animation=True)
